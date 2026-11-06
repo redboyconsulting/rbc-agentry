@@ -1,0 +1,25 @@
+# Add 'python' label to any change within the 'python' directory
+python:
+- changed-files:
+  - any-glob-to-any-file:
+    - python/**
+
+# Add 'documentation' label to any change within the 'docs' directory, or any '.md' files
+documentation:
+- changed-files:
+  - any-glob-to-any-file:
+    - docs/**
+    - '**/*.md'
+
+# Add 'workflows' label to any change within the Python workflows src or samples
+workflows:
+- changed-files:
+  - any-glob-to-any-file:
+    - python/packages/main/agent_framework/_workflow/**
+    - python/samples/getting_started/workflow/**
+
+# Add 'lab' label to any change within the 'python/packages/lab' directory
+lab:
+- changed-files:
+  - any-glob-to-any-file:
+    - python/packages/lab/**
