@@ -66,6 +66,7 @@ El proyecto requiere Python 3.10 o superior. Para estos pasos usa **Python
 
 ```powershell
 winget install --exact --id Python.Python.3.12
+$env:Path = [Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [Environment]::GetEnvironmentVariable("Path","User")
 ```
 
 Abre una terminal nueva después de instalarlo y comprueba la versión:
@@ -127,7 +128,7 @@ activar el entorno de nuevo; `deactivate` lo desactiva.
 #### 5. Prueba el template
 
 ```powershell
-cd "C:\Users\User\OneDrive\Desktop\agent-framework"
+cd "\rbc-agentry"
 $env:OLLAMA_MODEL = "qwen3:14b"
 $env:ENABLE_PLAYWRIGHT_MCP = "1"
 $env:PLAYWRIGHT_MCP_OFFLINE = "1"
